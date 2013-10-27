@@ -9,6 +9,7 @@ namespace Fget.Tests
     [TestFixture]
     public class FgetTests
     {
+        /*
         private static List<FlickrAlbum> GetAlbums()
         {
             var albums = new FlickrMember("thomashawk").GetFlickrAlbums();
@@ -73,5 +74,6 @@ namespace Fget.Tests
             Assert.That(files.Select(Path.GetFileNameWithoutExtension).ToList(),
                 Is.EquivalentTo(images.Select(x => x.Id).ToList()));
         }
+         * */
     }
 }
