@@ -20,7 +20,7 @@
         <p class="header">flickr automatic download tool</p>
 
         <ul>
-          <li class="download"><a class="buttons" href="zips/test.zip">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="zips/fget-1.0.zip">Get fget-1.0.zip</a></li>
           <li><a class="buttons github" href="https://github.com/inosyryev/fget">View On GitHub</a></li>
         </ul>
 
@@ -35,11 +35,6 @@
 
       </header>
       <section>
-        <h3>
-<a name="tbd" class="anchor" href="#tbd"><span class="octicon octicon-link"></span></a>To be done</h3>
-
-<p>I have to cleanup the code to make it have more sense. Right now the download is just for testing. The real stuff should be available in a day or two. Sorry for inconvenience.</p>
-
         <h3>
 <a name="a-bit-of-history" class="anchor" href="#a-bit-of-history"><span class="octicon octicon-link"></span></a>A bit of history</h3>
 
@@ -60,14 +55,38 @@ On each run it scans albums for available images, compares them with files on di
 some Flickr servers, which return errors. Just run this application several times and finally it will get everything. Because it's a simple executable, it's possible to
 run it on a schedule to monitor sites. The implementation is in .NET, so it can be used on both Windows or Unix (using Mono).</p>
 
+        <h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h3>
+
+<p>The usage of this command line application is very simple:<ol>
+<li>Download ZIP file</li>
+<li>Unpack it to any directory</li>
+<li>Update preferred directory to store photos in Fget.exe.config or keep default</li>
+<li>Update a list of albums to download in Fget.exe.config</li>
+<li>Run Fget.exe</li>
+</ol>
+</p>
+
 <h3>
 <a name="config-file" class="anchor" href="#config-file"><span class="octicon octicon-link"></span></a>Configuration File</h3>
 
-<pre><code>&lt;config&gt;
-&lt;/config&gt;
-</code></pre>
+<p>To change preferred directory to store photos find following line in the provided Fget.exe.config
+<pre><code>&lt;value&gt;photos&lt;/value&gt;</code></pre>
+In this line "photos" is a default value. Change it to your favorite absolute or relative path.</p>
 
-<p>TBD</p>
+<p>To change the list of albums to download find following lines in the provided Fget.exe.config
+<pre><code>&lt;string&gt;thomashawk|Williamsburg Bridge&lt;/string&gt;
+&lt;string&gt;thomashawk|Buckyball&lt;/string&gt;</code></pre>
+Each line defines a single album in the following format: "user-name|album-name". In this case "user-name" comes from Flickr URL. For example, user-name "thomashawk" is 
+from <a href="http://www.flickr.com/photos/thomashawk">http://www.flickr.com/photos/thomashawk</a>. Edit Fget.exe.config and add all your albums as separated string.</p>
+
+<h3>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
+
+<p>If you found an error or have any request, suggesting or comment, please, go to the <a href="https://github.com/inosyryev/fget">github site</a> and post a new issue.
+I will try to fix things as time permits.</p>
+
+<p><center>HAPPY DOWNLOADS!</center></p>
 
       </section>
       <footer>
