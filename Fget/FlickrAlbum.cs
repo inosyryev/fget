@@ -40,7 +40,7 @@ namespace Fget
 
             var images = GetImages();
             var missing = images.Where(x => !x.Exists(directory)).ToList();
-            Console.WriteLine("=============== Album: {0} (Total: {1}, Missing: {2})", Name, images.Count, missing.Count);
+            Console.WriteLine("======== Album: {0} (Total: {1}, Missing: {2})", Name, images.Count, missing.Count);
             if (missing.Count == 0)
                 return;
 
